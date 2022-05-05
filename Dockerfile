@@ -14,7 +14,7 @@ COPY src /var/www/html/
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE $PORT
 
 RUN sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
 
